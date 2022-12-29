@@ -1,0 +1,220 @@
+/*
+Dark primary color #689F38  VERDE
+Light primary color #DCEDC8 VERDE MUY CLARO
+Primary color #8BC34A VERDE CLARO
+Text/icons #212121  NEGRO
+Accent color #4CAF50 VERDE BENETTON
+Secondary text #757575 GRIS OSCURO
+Divider color #BDBDBD GRIS CLARO
+
+flatuicolors.com - materialpalette.com - paletas
+uigradients.com - degradados
+*/
+/* caniuse.com para probar navegadores*/
+
+
+html{
+  font-family: 'Libre Franklin', sans-serif;
+} /* La fuente se aplica a todo el sitio web*/
+
+a{
+  text-decoration: none; /*link sin la linea abajo*/
+  color: #689F38;
+}
+
+img{
+  max-width: 100%;
+}
+
+.title{
+  text-transform: uppercase; /*títulos en mayúscula - capitalize solo la primera en mayúscuclas - lowercase todas en minusculas*/
+  text-align: center;
+  color: #689F38;
+  }
+.container{
+  background: #8BC34A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #212121, #689F38, #8BC34A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #212121, #689F38, #8BC34A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh; /*100vh representa el alto total de la pantalla*/
+  width: 100vw; /* 100vw representa el ancho total de la pantalla*/
+  display:flex; /*flexbox  flexboxfroggy.com juego para aprender flexbox*/
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  max-width: 960px;
+  width: 100%;
+  height: 80vh;
+  background-color:white ;
+  box-shadow: 0 3px 6px #4CAF50, 0 3px 6px #689F38;  /*Sombras diferenciahorizontal diferenciavertical desemfoque amplitud color;*/
+  border-radius: 4px; /*redondear bordes */
+  position: relative;
+  padding: 1.8em; /*espacio alrededor*/
+  color: #757575;
+  overflow: scroll; /*propiedad que define como se comporta el contenido que se sale de las dimenciones del elemento. por defecto lo muestra aunque este fuera  hidden lo esconde scroll le pone barras al elemento*/
+}
+
+.content{
+  padding: 1em;
+}
+
+td{
+  display: block;
+  width: 100%;
+}
+
+td:nth-of-type(1)/*nos permite seleccionar un elemento basado en su posicion cuando esta al lado de otras etiquetas del mismo tipo*/{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #689F38;
+}
+
+th{
+  display: none;
+}
+
+.actions{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.close{
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: #689F38;
+  display: inline-block;
+  box-shadow: 0 2px 6px #4CAF50, 0 2px 6px #689F38;
+  font-weight: 200;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paragraph{
+  line-height: 1.8em; /*separación entre lineas*/
+  font-weight: 200;
+}
+
+.fa-star{
+  color: #8BC34A;
+}
+
+.table{
+  width: 100%; /*ocupa todo el ancho de la pantalla*/
+  border-spacing: 0;
+}
+
+.table td, .table th{
+  padding: 1em;
+  text-align: left;
+}
+
+
+.table tr:nth-child(even){
+  background-color:#DCEDC8;
+  } /*nos permite seleccionar a los hijos de un padre - odd impares - even pares*/
+
+.title-item{
+  /*border-bottom-style: solid; /*define tipo de borde - bottom solo abajo*/
+  /*border-width: 2px; /*grososr del borde*/
+  /*border-color: #689F38; /*Cambiar al color*/
+
+  font-size:2em;
+  border-bottom: solid 2px #689F38;/*shorthand propieties - permiten especificar el valor de multiples propiedades en una sola declaración*/
+  padding-bottom: 1em;
+  }
+  /*Bordes - w3schools.com/css/css_border.asp */
+
+  /*shorthand propieties - permiten especificar el valor de multiples propiedades en una sola declaración*/
+
+.address{
+  font-weight: bold;
+  color: #689F38;
+  font-size: 1.2em;
+  margin-top: 2em;
+  display: inline-block; /*para que no ignore el margen*/
+}
+
+.main-image{
+  float:left; /*Texto fluye a la derecha*/
+  margin-right: 1em;
+  height: 180px;
+}
+
+.position{
+  background-color: #689F38;
+  color: #DCEDC8;
+  padding: 0.5em 0.5em 0.5em 0.5em; /*arriba - derecha - abajo - izquierda si especifico uno solo se aplica a todos los lados*/
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
+
+a:hover{ /*cuando ponemos el mouse sobre algo*/
+  opacity: 0.5;  /*opacidad... valores del 0 al 1*/
+}
+
+a:visited{ /*El linck ha sido visitado previamente*/
+}
+
+a:active{
+  background: #8BC34A; /*cuando el usuario presiona el linck o boton*/
+}
+
+
+@media (min-height:550px) {
+  .content{
+    height: 500px;
+  }
+}
+
+
+@media(min-width:900px){
+  th{
+    display: table-cell;
+  }
+
+td{
+  width: auto;
+  display: table-cell;
+}
+
+td:nth-of-type(1){
+  font-size: 1em;
+  font-weight: normal;
+}
+.content{
+  padding: 1.8em; /*espacio alrededor*/
+}
+}
+
+/*Especificidad peso que se le asigna a una declaración - presedencia; oden en que el ordenador aplica
+atributos declarados por style tienen peso mas alto solo se aplica otro si al finalizar declaracion agregamos etiqueta important(evitar usarla)
+1-important
+2-style
+selectores
+1- por ID
+2- de clase atributos y pseudoclases
+3- de tipo y pseudoelementos
+*/
+
+
+/*
+
+position: static(por defecto) |
+relative(toma como origen la posicion en la que se encuentra) |
+absolute (la posicion es relativa al contenedor mas cercano que este posicionado, sino es relativo al viewport pero se ve afectado por el scroll) |
+fixed(se añaden de manera relativa al viewport, todo lo que vemos en pantalla, no se ve afectado por el scroll) |
+sticky;
+top | botton | left | right
+
+*/
+
+
+/*ANIMACIONES: fotogramas
+animate.css galeria de animaciones preestablecidas https://daneden.github.io/animate.css/
+*/
